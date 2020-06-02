@@ -1,0 +1,23 @@
+<script>
+    var a = {
+        name: 'itka',
+        protocol: "https",
+        maxStudentCount: 10,
+        isOnline: true,
+        students: ['ivan', 'andrey', 'farid'],
+        classroom: {
+            teacher: {
+                name: 'wew',
+                age: 18
+            }
+        }
+    }
+    // shallow copy
+    var b = {...a}
+    // next we do full copy
+    b.classroom = {...a.classroom};
+    b.classroom.teacher = {...a.classroom.teacher};
+    b.students = [...a.students];
+
+    console.log(a)
+</script>

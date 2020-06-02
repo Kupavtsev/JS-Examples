@@ -1,0 +1,83 @@
+<script>
+    let man = {
+        name: 'Oleg',
+        age: 36,
+        sayName() {
+            alert(this.name);
+        }
+    }
+
+console.log(man.age);
+console.log(man.name);
+man.sayName();
+
+
+
+let page = {
+    title: 'Trading',
+    content: '',
+    render() {
+        document.title = this.title;
+        document.write(this.content);
+    }
+}
+
+page.content = '<div>Content about Trading!</div>';
+page.render();
+
+let page2 = {
+    title: 'Scalping',
+    _content: '',
+    setContent(value) {
+        // example of use: value is dangerous SSX throw new exception
+        this._content = value;
+    },
+    getContent() {
+        return this._content;
+    },
+    render: function() {
+        document.write(this._content);
+    }
+}
+
+// page2._content = '<div>Content about React</div>';
+page2.setContent('<div>Content about React</div>');
+// console.log( page2._content );
+console.log( page2.getContent() );
+page2.render();
+
+
+// store
+let store = {
+    _subscriber() {
+        console.log('no subscribers (observers)');
+    },
+    _state: {
+        firstName: 'firstName',
+        lastName: 'lastName'
+    },
+    getState() {
+        return this._state;
+    },
+    subscribe(observer) {
+        this._subscriber = observer;
+    },
+    setFirstName(value) {
+        this._state.firstName = value;
+        this._subscriber();
+    }
+}
+
+let state = store.getState();
+store.setFirstName('Trader');
+state = store.getState();
+
+store.subscribe( () => {
+    //debugger;
+    let state = store.getState();
+    renderPage(state);
+} );
+
+store.setFirstName('youtube');
+
+</script>

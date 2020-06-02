@@ -1,0 +1,11 @@
+<script>
+debugger;
+let user = {
+    firstName: 'John',
+    say(time, phrase) {
+        alert(`[${time}] ${this.firstName}: ${phrase}!`);
+    }
+};
+user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
+user.sayNow('Hello');
+</script>

@@ -1,0 +1,23 @@
+<script>
+
+let store = {
+    _state: {
+        profile: {
+            messages: ['hi', 'yo']
+        },
+        dialogs: {
+            user: [{id: 1, name: 'Oleg'},
+                {id: 2, name: 'Andy'}],
+            selectUserId: 2,
+            messages: ['hi', 'I love scalping']
+        }
+    },
+    addMessage(message) {
+        this._state.profile.messages.push(message);
+    },
+    selectDialogUser(userId) {
+        this._state.dialogs.selectUserId = userId;
+    }
+}
+
+</script>

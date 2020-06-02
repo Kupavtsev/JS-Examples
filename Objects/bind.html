@@ -1,0 +1,34 @@
+<script>
+    let user = {
+        firstName: 'Ivan',
+        sayHi(phrase) {
+            alert(`${phrase}, ${this.firstName}!`);
+        }
+    };
+
+// This 3 ways doesn't work
+// setTimeout(user.sayHi, 1000);
+
+// let f  = user.sayHi;
+// setTimeout(f, 1000);
+
+// 1st Decision
+// old verision
+/*
+setTimeout(function() {
+     user.sayHi();
+}, 1000);
+*/
+
+// the same
+//setTimeout(() => user.sayHi(), 1000);
+
+//user = {sayHi() { alert("Another user"); } };
+
+//  2nd Decision - bind, for 'this.' fixing
+// let boundFunc = func.bind(context);
+let sayHi = user.sayHi.bind(user);
+setTimeout(sayHi, 1000);
+sayHi("Hi");
+
+</script>
