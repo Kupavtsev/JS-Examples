@@ -1,0 +1,14 @@
+<script>
+    var fruits = ["манго", "банан", "вишня", "персик"];
+    for (var i = 0; i < fruits.length; i++)
+        alert(fruits[i]);
+
+    //the same
+    for (var i = 0; i < fruits.length; i++)
+        if (fruits[i] != undefined) alert(fruits[i]);
+
+    // With new Array
+    var lookup_table = new Array(1024);
+    for (var i = 0; i < lookup_table.length; i++)
+        console.log(lookup_table[i] = i * 512);
+</script>

@@ -1,0 +1,20 @@
+<script>
+
+    const auto = {
+        model: 'Audi',
+        color: 'red',
+        year: 2012
+    }
+
+    const input  = prompt('Enter a property: ')
+    // Берем объект auto и проверяем поле, которое хранится в переменной input
+    const value = auto[input];
+
+    // В случае если название совпадает с названием одного из полей, то будет true
+    if (value) {
+        console.log(value);
+    } else {
+        console.log('Not found');
+    }
+
+</script>
