@@ -1,0 +1,19 @@
+<script>
+
+    // assign copy, add new property
+    // first arg - where we will do copy
+    
+    const storeGood = {
+        number: 1001,
+        place: 'A101',
+        weight: 25
+    }
+
+    // args, 1-where, 2-from, 3-new properties
+    const shopGood = Object.assign({}, storeGood, { cost: 10 });
+
+    storeGood.number = 2000;
+
+    console.log(storeGood, shopGood);    
+
+</script>
