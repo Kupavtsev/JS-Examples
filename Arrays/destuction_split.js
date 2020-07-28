@@ -34,3 +34,25 @@ function defaultLastName() {
   
   alert(firstName); // Вася
   alert(lastName);  // 1436...-visitor
+
+  // Разбиваем строку на переменные
+  'use strict';
+  let username = 'John Smith';
+  let [fName, sName] = username.split(' ');
+
+  // Исключаем лишние элементы
+  'use strict';
+  let nums = [10, 20, 30];
+  let [num1, ,num2] = nums;
+  
+  // Создание переменной, в случае отсутствия
+  'use strict';
+  let nums = [10, 20];
+  let [num1, num2, num3=50] = nums;
+
+
+  'use strict';
+  const olimpics = [12, 23, 45];
+  let [ gold=0, , bronze=0 ] = olimpics;
+  console.log(gold, bronze);
+  

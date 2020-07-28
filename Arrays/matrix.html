@@ -5,7 +5,7 @@
         table[i] = new Array(10); // В каждой строке 10 столбцов
     // Инициализация массива
     for (var row = 0; row < table.length; row++) {
-        for (col = 0; col < table[row].length; col++) {
+        for (var col = 0; col < table[row].length; col++) {
             table[row][col] = row * col;
         }
     }

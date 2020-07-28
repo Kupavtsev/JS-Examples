@@ -1,0 +1,35 @@
+<script>
+
+    // Возведение в степенль
+    // На вход приходит число и мы его само на себя
+    // умножаем нужное количество раз
+    'use strict'
+    function calc(num, exp) {
+        let res = 1;
+
+        for (let i=1; i<=exp; i++) {
+            res = res * num;
+        }
+
+        return res;
+    }
+
+    const result = calc(2, 10);
+
+    console.log(result);
+
+    // Площадь прямоугольника
+    'use strict'
+
+    const area = (a, b) => {
+        if ((a > 0) && (b > 0)) {
+            return a * b;
+        } else {
+            return null;
+        }
+    }
+
+    const result = area(5 ,4);
+    console.log(result);    
+
+</script>

@@ -30,8 +30,8 @@ let newArray = oldArray.map( name => {
 
 // String format
 let newArray = oldArray.map( name => {
-    return `<li>${name}<li>`;
-})
+    return `<li>${name}</li>`;
+});
 
 // One string format (without "return")
 let newArray = oldArray.map( name => `<li>${name}<il>`);
@@ -43,15 +43,15 @@ let newArray = oldArray.map( el => {
     return {
         eng: el,
         ru: translateIntoRu(el)
-    };
-})
+    }
+});
 //[{eng: "blabla", ru: "БЛАБЛА"}, {eng: "hello", ru: "привет"}, {eng: "hi", ru: "здарова"}]
 
 // The same in one string (without "return")
-let newArray = oldArray((word) => ({
+let newArray = oldArray.map((word) => ({
     eng: word,
     ru: translateIntoRu(word)
-}))
+}));
 
 
 // Array of objects to Array of JSX elements
