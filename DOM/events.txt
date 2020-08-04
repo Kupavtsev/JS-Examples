@@ -1,0 +1,45 @@
+События связанные с мышью
+click
+contextmenu
+mouseover / mouseout
+mousedown / mouseup
+mousemove
+
+<button onclick="handler()">Button</button>
+function handler() {...}
+-Таким способом нельзя навесить на один элемент сразу два обработчика
+-приходится смешивать html разметку и програмный код (указываем имя функции)
+
+Альтернатива
+.addEventListener(событие, обработчик)
+Ex:
+el = ...querySelector(..);
+el.addEventListener('click', handler);
+function handler() {...}
+
+В качестве аргумента передается объект (event). Он хранит инфо о событии
+el.addEventListener('click', handler);
+function handler(event) {...}
+Ex:
+Получить значение элемента на котором сработало событие
+Это полезно, когда событие навешивается не на сам элемент, а на внешнюю обертку
+И с помощью currentTarget отслеживать на каком именно элементе сработало событие (ckick...)
+Т.е. на блок в котором есть несколько элементов
+function handler(event) {
+    console.log(event.currentTarget);
+}
+
+Удаление обработчика
+el = ...querySelector(..);
+el.removeEventListener('click', handler);
+
+
+Клавиатурные
+нажатие / отжатие
+keydown / keyup
+
+События Форм
+submit
+focus
+
+Эти значения хранятся в поле value

@@ -1,0 +1,61 @@
+Обратиться к элементу в консоли браузера
+
+Выбираем мышкой элемент в закладке elements
+Переходим в консоль и пишем $0
+
+Через точку доступ к свойствам, которые можно изменять
+$0.style.color = '#f00'
+
+Селекторы
+Используются, чтобы выбрать группу элементов. Это строка, которая описывает характеристики html
+элемента (селектор).
+Самый простой Селектор, это селектор по Тегу. 'div' найдет все <div>
+По классу: '.block' найдет <div class="block">
+По id: '#block' найдет <div id="block">
+Селектор по Атрибуту: '[type=text]' найдет <input type="text">
+
+комбинирование селекторов
+'input.name[type="text"]' ,т.е input с классом name и атрибутом type=text
+
+Для поиска элементов DOM используется querySelector
+let el = document.querySelector('div')
+Для несольких элементов querySelectorAll, вернет массив элементов
+
+
+innerText
+Так обозначается текст записанный внутри любого элемента
+<p class="note">
+Some text here</p>
+
+el.innerText
+// Some text here
+
+el.innerText = 'New Text';
+
+innerHTML
+Хранит строку, которая находится в HTML элементе
+<p class="note">
+    <span>Text</span>
+</p>
+
+el.innerHTML
+// '<span>Text</span>'
+
+el.innerHTML = '<b>SOMETHING NEW</b>'
+
+
+createElement
+Создает новый элемент
+const el = document.createElement('p');
+const outer = document.querySelector('p')
+outer.append(el);
+// append - элемент добавится после последнего дочернего элемента
+// Я так понимаю, в таком коде новый элемент 'p' добавится в первый
+// найденый, уже существующий элемент 'p'
+
+// Удаляет элемент из DOM безвозвратно
+el.remove();
+
+// Скрыть элемент, свойство hidden
+el.hidden = true;
+el.hidden = false;
