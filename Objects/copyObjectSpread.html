@@ -1,5 +1,5 @@
 <script>
-    var a = {
+    let a = {
         name: 'itka',
         protocol: "https",
         maxStudentCount: 10,
@@ -10,8 +10,35 @@
                 name: 'wew',
                 age: 18
             }
+        },
+        arrayOfObjects: [
+            {id: 1, flag: true, string: 'true'},
+            {id: 2, flag: false, string: 'false'},
+            {id: 3, flag: true, string: 'true'}
+        ]
+    }
+
+    // Изменяем Флаг в объекте через копию
+    // Это образец работы user-reducer в 49 уроке
+    let chanegeFlag = (flagId) => {
+        //debugger;
+        return {
+            ...a,
+            arrayOfObjects: [...a.arrayOfObjects.map(f => {
+                if ( f.id === flagId.id) {
+                     return {...f.flag = false}
+                    //  return {...f, flag:false} why its doesnt work?
+                }
+                return f
+            })]
         }
     }
+
+    let flagId = {id: 1};
+
+    chanegeFlag(flagId);
+    console.log(a.arrayOfObjects)
+
     // shallow copy
     var b = {...a}
     // next we do full copy
