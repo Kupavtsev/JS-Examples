@@ -47,3 +47,12 @@ function removeMessage() {
     const messageEl = document.querySelector('.messages');
     messageEl.remove();
 }
+
+
+// 86 React IT-KA
+
+const addHTMLElemenet = () => {
+    let h1 = document.createElement('h1');
+    h1.innerHTML = 'Hello innerHTML h1';
+    document.querySelector('body').appendChild(h1);
+}

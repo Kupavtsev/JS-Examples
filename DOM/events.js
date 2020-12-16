@@ -23,8 +23,9 @@ function addElementToList(text) {
 
 // очищаем поле ввода
 function clearInput() {
-    const input = document.querySelector('.text-field');
-    input.value = '';
+    // const input = document.querySelector('.text-field');
+    // input.value = '';
+    document.querySelector('.text-field').value = '';
 }
 
 

@@ -17,6 +17,7 @@ for (let key in options) {
     console.log(key + ' : ' + options[key]);
 }
 
+
 // lesson 13 Arrays #2
 
 let arr = [1, 2, 3, 'four', 5];
