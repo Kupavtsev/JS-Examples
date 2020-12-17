@@ -118,3 +118,73 @@ btn.forEach(function(item) {
         console.log("We are out!");
     })
 })
+
+/* document.addEventListener('DOMContentLoaded', function() {
+    alert('Dom have been loaded!');
+}) */
+
+// 2_18.1 Mobile Devices
+
+// touchstart
+// touchmove
+// touchend
+// tochenter
+// touchleave
+// touchcancel
+
+window.addEventListener('DOMContentLoaded', function() {
+
+    /* box.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        console.log("Blue Box: touchstart");
+        console.log(e.target);
+        console.log(e.touches[0].target);
+        console.log(e.changedTouches);
+        console.log(e.targetTouches);
+    }); */
+    
+    box.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        console.log("Blue Box: " + e.touches[0].pageY);
+    });
+
+    /*
+    box.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        console.log("Blue Box: touchend");
+    }); */
+
+    // Regular Expressions
+    // new RegExp('pttern', 'flags');
+    // /pattern/flags
+
+    // let ans = prompt('Enter your name')
+    // let reg = /n/gi;
+
+    // console.log(ans.search(reg));
+    // console.log(ans.match(reg));
+    // console.log(reg.test(ans));
+
+    // i registr
+    // g Global
+    // m Multiline
+
+    // let pass = prompt('Enter password');
+    // console.log(pass.replace(/./g, "*"));
+    // alert('12-34-56'.replace(/-/g, ':'));
+
+
+    // let ans = prompt('Enter a number')
+    // let reg = /\d/g;
+    // console.log(ans.match(reg));
+
+
+    let str = 'My name is/ R2D2';
+
+    console.log(str.match(/\w\d\w\d/i));
+    console.log(str.match(/\//i));
+
+});
+
+
+
