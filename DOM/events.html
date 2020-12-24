@@ -9,7 +9,7 @@
     <input class="text-field" type="text">
     <button onclick="buttonClick()">Send</button>
     <ul class="list">
-        
+
     </ul>
 
     <p class="text">
@@ -19,6 +19,94 @@
         I love JavaScript! I love JavaScript! I love JavaScript! I love JavaScript!
     </p>
     <button class="button">Click</button>
+    <div>
+        -------------------
+    </div>
+    <div>
+        <button id='btnOn'>on memory</button>
+        <script>
+            class Menu {
+                handleEvent(event) {
+                    //debugger;
+                    switch (event.type) {
+                        case 'mousedown':
+                            console.log('on' + event.type[0].toUpperCase() + event.type.slice(1));
+                            btnOn.innerHTML = 'Pressed'
+                            break;
+                        case 'mouseup':
+                            console.log(event.type)
+                            btnOn.innerHTML = 'UNPRESSED!'
+                            break;
+                    }
+                }
+            }
+
+            let menu = new Menu();
+            btnOn.addEventListener('mousedown', menu);
+            btnOn.addEventListener('mouseup', menu);
+        </script>
+        <div>
+            -------------------
+        </div>
+
+        <button id=obj>Object?</button>
+        <script>
+            obj.addEventListener('click',
+                function (e) {
+                    //debugger;
+                    console.log(e.type + 'Object?');
+                    //alert('test');
+                })
+        </script>
+
+        <div>
+            -------------------
+        </div>
+
+        <button id="elem">Нажми меня</button>
+
+        <script>
+            class MyMem {
+                handleEvent(event) {
+                    let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+                    this[method](event);
+                }
+
+                onMousedown() {
+                    elem.innerHTML = 'MyMem Pressed';
+                }
+
+                onMouseout() {
+                    elem.innerHTML = 'MyMem UNPRESSED!';
+                }
+
+                onMouseup() {
+                    elem.innerHTML = 'MyMem UNPRESSED!';
+                }
+
+            }
+
+            let myMem = new MyMem();
+            elem.addEventListener('mousedown', myMem);
+            elem.addEventListener('mouseup', myMem);
+        </script>
+
+        <div>-------------------------------</div>
+
+        <input type="button" onclick='this.hidden = true' id="hider" value="Нажмите, чтобы спрятать текст" />
+
+        <div id="text">Текст</div>
+
+        <script>
+            let deleteText = () => {
+                let text = document.querySelector('#text');
+                text.hidden = true;
+            }
+            hider.addEventListener('click', deleteText)
+        </script>
+
+
+    </div>
 
     <script src='./events.js'></script>
 </body>
