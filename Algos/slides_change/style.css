@@ -1,0 +1,52 @@
+.content {
+    width: 480px;
+    height: 640px;
+}
+.content .info .info-tabcontent .photo img {
+    width: 200px;
+    height: auto;
+}
+
+.content .info .info-tabcontent .description-btn {
+    width: 180px;
+    height: 45px;
+    line-height: 43px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #c78030;
+    font-size: 14px;
+    color: #c78030;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.content .info-header-tab {
+    color: #c78030;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+.content .info .hide {
+    display: none;
+}
+
+.content .info .info-tabcontent .show {
+}
+
+.info .info-header {
+    margin-bottom: 30px;
+    /* display: inline; */
+}
+
+.info .info-header .info-header-tab {
+    margin: 15px;
+    display: inline;
+}
+
+.description-title {
+    font-weight: bold;
+}
