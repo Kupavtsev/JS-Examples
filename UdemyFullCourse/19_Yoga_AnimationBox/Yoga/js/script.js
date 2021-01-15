@@ -9,11 +9,11 @@ window.addEventListener('DOMContentLoaded', function() {
     'use strict'
 
     // __________________________________________________
-    // My try to get text oust from HTML
+    // My try to get text out from HTML
     // Also I can put this text to txt file or json...
     // const pozvon = 'Йога, массажи и плавание в море - помогут уставшей спине! Индийские йоги считали, что здоровье человека можно определить по тому, насколько здоров и гибок у него позвоночник.<br> Интересно, что бы древние йоги сказали, глядя на современного человека, который уже со школьного возраста мучается болями в спине, работает подолгу в неудобных сидячих позах и не умеет расслабляться, имеет искривление, которое в итоге приведет к болезням других органов? Йоги сказали бы – займись собой и срочно!';
-    // let myTryd = document.querySelector('.description-text');
-    // myTryd.innerText = pozvon;
+    // let myTry = document.querySelector('.description-text');
+    // myTry.innerText = pozvon;
     // console.log(pozvon);
     // __________________________________________________
 
@@ -55,5 +55,3 @@ window.addEventListener('DOMContentLoaded', function() {
         })
 
 });
-
-// 3:30

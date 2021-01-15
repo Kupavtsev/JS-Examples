@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
     function hideTabcontent(TC) {
         for (let i = TC; i < tabContent.length; i++) {
             // console.log(i)
+            // Этими строчками все элементы tabContent скроются со страницы
             tabContent[i].classList.remove('show');
             console.log('done show: ' + i);
             tabContent[i].classList.add('hide');
@@ -42,7 +43,9 @@ window.addEventListener('DOMContentLoaded', function() {
             //  он скроеет все Табы и покажет, который совпал
             for (let i = 0; i < tab.length; i++) {
                 if (target == tab[i]) {
+                    // скрываем все Табы
                     hideTabcontent(0);
+                    // который берется из tab[i]
                     showTabcontent(i);
                 }
             }

@@ -1,0 +1,1 @@
+Here is base of Java Script and some Algorythms
