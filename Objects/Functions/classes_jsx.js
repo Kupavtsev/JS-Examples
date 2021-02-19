@@ -15,7 +15,6 @@ class Man {
 let m1 = new Man('Oleg', 36);
 let jsx = m1.render();
 
-
 // The same, but as Class Component
 class Man2 {
     constructor(props) {
