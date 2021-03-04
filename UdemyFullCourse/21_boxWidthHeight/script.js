@@ -15,7 +15,7 @@ console.log('this is Left: ' + box.getBoundingClientRect().left);
 console.log('width of page: ' + document.documentElement.clientWidth);
 console.log('height of page: ' + document.documentElement.clientHeight);
 
-// Применятеся для того, чтобы узнать сколько уже отматали
+// Применятеся для того, чтобы узнать сколько уже отмотали
 // Или для того, чтобы переместить страницу к заданному месту или наверх
 console.log('scroll of total page: ' + document.documentElement.scrollTop);
 

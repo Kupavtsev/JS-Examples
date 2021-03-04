@@ -47,9 +47,6 @@ let mass = [1, 3, 4, 6, 7];
 for (let key in mass) {
     console.log(key);
 }
-for (let key of mass) {
-    console.log(key);
-}
 
 // # 4
 
@@ -77,7 +74,7 @@ function compareNum(a, b) {
 
 console.log(i, y);
 
-// У Псевдомассивов нет этих методдов, которые здесь описаны
+// У Псевдомассивов нет этих методов, которые здесь описаны
 // из-за различия в прототипе с обычными массивами
 
 // Course 14

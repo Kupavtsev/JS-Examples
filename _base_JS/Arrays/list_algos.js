@@ -4,14 +4,14 @@
 let N = prompt('Enter Array len: ')
 
 let A = [] 
-A.length = N
+A.length = N    // specify length of the Array
 let B = [] 
 B.length = N
 
 for (let i = 0; i < A.length; i++) {
-    A[i] = prompt('Enter value for Array element: ')
+    A[i] = prompt('Enter value for Array element: ')    //# putting values one by one to the list A
 }
-for (let i = 0; i < A.length; i++) {
+for (let i = 0; i < A.length; i++) {    //coping elements from one to another
     B[i] = A[i]
 }
 
