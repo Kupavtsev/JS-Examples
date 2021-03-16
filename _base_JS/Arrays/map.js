@@ -13,7 +13,7 @@ let newArray = oldArray.map((el) => {
 
 
 
-// Turnar expression
+// Ternar expression
 let newArray = oldArray.map((el) => {
     return isMaleName(el) ? 1 : 0;
 })
