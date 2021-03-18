@@ -28,3 +28,5 @@ let a = [1,2,3,4];
 let b = new Array(6);
 easyCopy({from: a, to: b, length: 4});
 console.log(b);
+
+// Это теория, самой функции нету....

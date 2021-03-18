@@ -1,0 +1,51 @@
+<script>
+    // prompt, delete, in, for
+    
+    let auto = {
+        model: 'Audi',
+        color: 'red',
+        year: 2012
+    }
+
+    let input = prompt('Enter a property: ');
+    
+    // 1
+    // Check for this Property in the Object
+    let hasProp = input in auto;    // boolean
+
+    // 2
+    // delete input prop
+    if (hasProp) {
+        delete auto[input];
+    } else {
+        auto[input] = null;
+    }
+
+    console.log(auto);
+
+    // 3
+    // Берем объект auto и проверяем поле, которое хранится в переменной input
+    const value = auto[input];
+
+    // В случае если название совпадает с названием одного из полей,
+    // то в условных конструкциях будет true
+    if (value) {
+        console.log(value);
+    } else {
+        console.log('Not found');
+    }
+
+    // 4
+    // Iteration - key: value
+    for (let key in auto) {
+        console.log("Prop " + key + ' have value ' + auto[key]);
+    }
+
+
+    //5
+    console.log(Object.keys(auto).length);  // 2
+
+</script>
+
+
+

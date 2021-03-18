@@ -1,4 +1,4 @@
-// setTimeout возвращает свой id
+//1 setTimeout возвращает свой id
 let id = setTimeout( () => {
     console.log('now!');
 }, 1000);
@@ -6,15 +6,16 @@ let id = setTimeout( () => {
 // Отмена действия функции
 clearTimeout(id);
 
-//
+
+// 2
 let sum = (a, b) => {
     let result= a + b;
     console.log(result);
 }
-// Передача параметров
+// with args
 setTimeout(sum, 1000, 2, 3);
 
-// Вызывает не один раз, а через равные промежутки времени
+// 3    --- the same logic, but call it with interval
 setInterval( () => {
     console.log('now!')
 }, 1000);

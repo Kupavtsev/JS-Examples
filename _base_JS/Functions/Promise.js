@@ -1,10 +1,11 @@
 // Конструкция, которая обрабатывает Асинхронные операции
-// Промису передается функции содержащая 2 параметра (res, rej)-это CB funcs
+// Промису передается функции содержащая 2 параметра (resolve, reject)-это CB funcs
 new Promise((resolve, reject) => {
     // асинхронная операция
 });
 
-// Theory
+// 1    --- Theory ---
+
 const prom = new Promise(...);
 
 prom.then(() => {
@@ -14,7 +15,8 @@ prom.then(() => {
 }
 });
 
-//
+//  2
+
 const request = new Promise((resolve, reject) => {
     console.log('request');
 

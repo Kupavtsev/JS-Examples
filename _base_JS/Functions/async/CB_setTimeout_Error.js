@@ -1,5 +1,4 @@
-// CB func Передается в асинхронную ф. в качестве параметра
-
+// 1     --- CB as argument in async Function ---
 const request = (cb) => {
     console.log('request');
 
@@ -15,7 +14,8 @@ const handler = () => {
 
 request(handler);
 
-// The same, but with DATA
+
+// 2     --- The same, but with DATA ---
 const request = (cb) => {
     console.log('request');
 
@@ -32,7 +32,8 @@ const handler = (data) => {
 
 request(handler);
 
-// Using the unNamed function as CB
+
+// 3     --- Using the unNamed function as CB ---
 const request = (cb) => {
     console.log('request');
 
@@ -47,7 +48,8 @@ request((data) => {
     console.log('Hello callback!', data);
 });
 
-// with error using
+
+// 4    --- using with error ---
 const request = (cb) => {
     console.log('request');
 

@@ -1,11 +1,17 @@
 <script>
     a = { key: 'keller', glue: 'veller', mega: 300}
 
+    // 1
+    // Display Property Keys
     function DisplayPropertyNames(obj) {
         var names = "";
         for(var name in obj) names += name + "\n";
-        alert(names);
+        console.log(names);
     }
 
     DisplayPropertyNames(a);
+
+    // 2
+    // the same as Array
+    console.log(Object.keys(a), "\n" + 'The length of object: ' + Object.keys(a).length)
 </script>

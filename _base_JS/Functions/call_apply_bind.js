@@ -1,3 +1,4 @@
+// Object method with handling to it's data by 'this'
 const person = {
     name: 'John',
     greet() {
@@ -9,18 +10,22 @@ const user = {
     name: 'Sam'
 }
 
-// Нам нужно использовать Метод greet
-// в Объекте user
+//      --- We need to use method of one object in another ---
 
-// Можно скопировать метод
+// Copy of objects methods
 user.greet = person.greet;
 user.greet();
 
-// Но можно не изменять объект user
+
+//      --- Another way ---
+
+
+// We can change object 'user'
 fun.call(context);
 fun.apply(context);
 
-//
+
+// Object method with handling to it's data by 'this'
 const person = {
     name: 'John',
     greet() {
@@ -28,11 +33,14 @@ const person = {
     }
 }
 
+
+// 1
 const user = { name: 'Sam' }
 person.greet.call(user);
 
-// call может вызвать функцию, которая
-// вообще не является методом какого либо объекта
+
+// 2
+// We can call external functions
 const person = { name: 'John' }
 const user = { name: 'Sam' }
 
@@ -43,8 +51,9 @@ function greet() {
 greet.call(user);
 greet.call(person);
 
-// в call можно передавать аргументы
-// через запятую после контекста
+
+// 3
+// call acepts an arguments, after comma
 const obj = { num: 45 }
 
 function sum(a) {
@@ -53,6 +62,8 @@ function sum(a) {
 
 const res = sum.call(obj, 20);
 
+
+// 4
 // few args
 const obj = { num: 45 }
 
@@ -62,7 +73,9 @@ function calc(a, b) {
 
 const res = calc.call(obj, 20, 3);
 
-// apply works the same as call
+
+//      --- 'apply' works the same as call ---
+
 // but args it recive as Array
 const obj = { num: 45 }
 
@@ -71,6 +84,7 @@ function calc(a, b) {
 }
 
 const res = calc.apply(obj, [20, 3]);
+
 
 // bind можно изменять контекст не изменяя функцию
 // т.е. ф. можно записать и вызвать в дальнейшем
