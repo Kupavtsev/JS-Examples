@@ -1,0 +1,50 @@
+<script>
+
+    // concat we can concatanate two arrays or add new elements
+    'use strict';
+    const first = [10, 20];
+    const second = [30, 40];
+
+    const arr = second.concat(first);
+    // [30, 40, 10, 20]
+
+    // add new elements
+    'use strict';
+    const arr = [10, 20];
+
+    const newArr = arr.concat(5, 6, 7);
+    // [10, 20, 5, 6, 7]
+
+    // Copy of arr
+    'use strict';
+    const arr = [10, 20];
+    const newArr = arr.concat(); 
+
+    // to string join
+    'use strict';
+    const nums = [30, 40, 10, 20];
+    const str = nums.join('-*-');
+    //"30-*-40-*-10-*-20"
+
+    // from String to array
+    'use strict';
+    const str = '12,13,14,15';
+    const arr = str.split();                // ['12,13,14,15']
+    const arr = str.split(',');             // ["12", "13", "14", "15"]
+    const arr = str.split('');              // ["1", "2", ",", "1", "3", ",", "1", "4", ",", "1", "5"]
+
+    
+    'use strict';
+
+    let nums = [11, 12, 13, 14, 15];
+    
+    let input = prompt('Enter 5 numbers through comma: ');          // Вводим 5 чисел через запятую
+                                                        // 1, 2, 3, 4, 5
+    let userArr = input.split(',');                   // Переводим введеную Строку в Массив
+    
+    let newArr = nums.concat(userArr);                // Объеденяем Массивы
+    
+    console.log(newArr);                              // [11, 12, 13, 14, 15, "1", "2", "3", "4", "5"]
+    
+
+</script>
